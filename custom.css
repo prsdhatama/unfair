@@ -74,9 +74,16 @@ header {
     ),
     url("assets/img/panoramas/Unfair-Panorama-Alien.png");
     /* url("assets/header.jpg"); */
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* make the eleemnt appear on tp of the other eleemnt, the pos absolute */
+    position: static;
+
+    top: 80px; /* Adjust this value to match your navbar height */
+    width: 100%;
+    height: calc(100vh - 80px);
 }
 
 .unfair__nav {
@@ -230,7 +237,7 @@ nav {
   color: var(--white);
 }
 .header__container button {
-  padding: 11px 12px;
+  padding: 12px 12px;
   font-size: 1.25rem;
   outline: none;
   border: none;
@@ -247,8 +254,8 @@ nav {
 .pseudo-button {
   position: absolute;
   bottom: 0;
-  left: 47.5%;
-  transform: translateY(50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
   /* width: 60px;
   height: 57px; */
   /* background-color: #3498db; */
@@ -261,6 +268,8 @@ nav {
   border: 1px solid var(--white);
   border-radius: 50%;
 
+
+  
   display: flex;
   align-items: center;
   justify-content: center;
